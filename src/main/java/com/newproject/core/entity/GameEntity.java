@@ -17,7 +17,7 @@ import lombok.Setter;
 public class GameEntity {
     @Id
     @GeneratedValue
-    private Long id;
+    private Long idGame;
 
     @Column(nullable = false)
     private String name;

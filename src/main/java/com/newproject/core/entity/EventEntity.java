@@ -3,8 +3,6 @@ package com.newproject.core.entity;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import com.newproject.core.model.Match;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,7 +23,7 @@ public class EventEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idEvent;
     
     @Column(nullable = false)
     private String name;
@@ -33,8 +31,8 @@ public class EventEntity {
     @Column(nullable = false)
     private LocalDateTime date;
 
-    @OneToMany(mappedBy = "events")
-    private List<Match> matches;
+    @OneToMany(mappedBy = "event")
+    private List<MatchEntity> matches;
 
 
 
