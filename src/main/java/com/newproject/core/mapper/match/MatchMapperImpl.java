@@ -8,10 +8,12 @@ import com.newproject.core.mapper.game.GameMapper;
 import com.newproject.core.mapper.player.PlayerMapper;
 import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
 
+@Component
 public class MatchMapperImpl implements MatchMapper{
 
     @Autowired
@@ -50,4 +52,5 @@ public class MatchMapperImpl implements MatchMapper{
                 playerMapper.toEntity(domain.winner())
                 );
     }
+
 }

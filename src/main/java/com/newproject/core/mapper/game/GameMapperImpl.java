@@ -4,7 +4,9 @@ import com.newproject.core.domain.Game;
 import com.newproject.core.entity.GameEntity;
 import com.newproject.core.exception.BadRequestException;
 import lombok.NonNull;
+import org.springframework.stereotype.Component;
 
+@Component
 public class GameMapperImpl implements GameMapper{
     @Override
     public Game toDomain(@NonNull GameEntity entity) {
@@ -31,4 +33,5 @@ public class GameMapperImpl implements GameMapper{
                 domain.price()
         );
     }
+
 }

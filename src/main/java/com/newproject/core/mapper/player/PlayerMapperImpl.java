@@ -3,7 +3,9 @@ package com.newproject.core.mapper.player;
 import com.newproject.core.domain.Player;
 import com.newproject.core.entity.PlayerEntity;
 import lombok.NonNull;
+import org.springframework.stereotype.Component;
 
+@Component
 public class PlayerMapperImpl implements PlayerMapper{
 
     @Override
@@ -25,4 +27,5 @@ public class PlayerMapperImpl implements PlayerMapper{
                 domain.level()
         );
     }
+
 }

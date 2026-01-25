@@ -31,8 +31,6 @@ public class EventEntity {
     @Column(nullable = false)
     private LocalDateTime date;
 
-    @OneToMany(mappedBy = "event")
-    private List<MatchEntity> matches;
 
 
 

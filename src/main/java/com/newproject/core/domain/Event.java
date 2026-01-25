@@ -6,10 +6,9 @@ import java.util.List;
 public record Event(
     Long id,
     String name,
-    LocalDateTime date,
-    List<Match> matches
+    LocalDateTime date
 ) {
     public boolean hasNullAttributes(){
-        return id == null || name.isBlank() || date == null || matches.isEmpty();
+        return id == null || name.isBlank() || date == null;
     }
 }

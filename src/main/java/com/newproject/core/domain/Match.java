@@ -6,9 +6,21 @@ import java.util.List;
 import com.newproject.core.enums.MatchState;
 
 public record Match(
-    Long id, LocalDateTime date, Game game, List<Player> players, MatchState matchState, Player winner, Event event
+    Long id,
+    LocalDateTime date,
+    Game game,
+    List<Player> players,
+    MatchState matchState,
+    Player winner,
+    Event event
 ) {
     public boolean hasNullAttributes(){
-        return id == null || date == null || game == null || players.isEmpty() || matchState == null || winner.hasNullAttributes() || event == null;
+        return id == null
+                || date == null
+                || game == null
+                || players.isEmpty()
+                || matchState == null
+                || winner.hasNullAttributes()
+                || event == null;
     }
 }
